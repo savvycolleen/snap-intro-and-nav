@@ -1,0 +1,113 @@
+:root {
+  --white: hsl(0, 0%, 98%);
+  --grey: hsl(0, 0%, 41%);
+  --black: hsl(0, 0%, 8%);
+  --fs-sm: clamp(0.8rem, 0.13vi + 0.77rem, 0.89rem);
+  --fs-base: clamp(1rem, 0.27vi + 0.95rem, 1.19rem);
+  --fs-md: clamp(1.25rem, 0.48vi + 1.15rem, 1.58rem);
+  --fs-lg: clamp(1.56rem, 0.79vi + 1.4rem, 2.11rem);
+  --fs-xl: clamp(1.95rem, 1.23vi + 1.7rem, 2.81rem);
+  --fs-xxl: clamp(2.44rem, 1.88vi + 2.06rem, 3.75rem);
+  --fs-xxxl: clamp(3.05rem, 2.79vi + 2.48rem, 5rem);
+}
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+/* p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+} */
+#root, #__next {
+  isolation: isolate;
+}
+
+body {
+  background-color: var(--white);
+  font-family: "Epilogue", sans-serif;
+  color: var(--black);
+
+}
+
+h1 {
+  font-size: var(--fs-xxl);
+}
+
+p {
+  font-size: var(--fs-sm);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .row__item {
+  width: 100%;
+} */
+
+.container {
+  padding: 1em;
+  max-width: 1000px;
+}
+
+.nav-menu {
+  display: none;
+}
+
+.nav-menu.active {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hero__content {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 2em;
+  text-align: center;
+  justify-items: center;
+}
+
+.btn {
+  background-color: var(--black);
+  padding: .75em 2em;
+  border-radius: 1em;
+  color: var(--white);
+}
+
+.client-row {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding-top: 2em;
+  padding-bottom: 4em;
+}
+
+.client-item {
+  width: 100%;
+}
